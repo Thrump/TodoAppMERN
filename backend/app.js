@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyparser = require('body-parser')
+const cors = require('cors')
 const connectDB = require('./config/db')
 
 // routes
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended: true}))
+app.use(cors())
 app.use('/todos', todos)
 
 const port = process.env.PORT || 8000

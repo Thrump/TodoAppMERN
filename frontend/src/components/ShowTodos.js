@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import '../App.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import TodoCard from './TodoCard'
 
-class ShowTodos extends Component {
+export class ShowTodos extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -29,7 +30,7 @@ class ShowTodos extends Component {
 
         let todoList;
 
-        if(!todos || todos.length == 0) {
+        if(!todos || todos.length === 0) {
             todoList = "There is no todo record!";
         }else {
             todoList = todos.map((todo , k) => {
