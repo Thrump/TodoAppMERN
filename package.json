@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm"
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run start\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^6.2.0"
+    "axios": "^0.21.1",
+    "concurrently": "^6.2.0",
+    "react-router-dom": "^5.2.0"
   }
 }
